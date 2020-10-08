@@ -1,0 +1,36 @@
+import javax.swing.JOptionPane;
+public class SwingGuis {
+public static void main(String[] args)
+{
+	JOptionPane.showMessageDialog(null,"What's up, y'all?");
+	String name = JOptionPane.showInputDialog("Enter your name");
+	String firstName = 
+			JOptionPane.showInputDialog("What is your first name?");
+	String middleName = 
+			JOptionPane.showInputDialog("What is your middle name?");
+	String lastName = 
+			JOptionPane.showInputDialog("What is your last name?");
+	JOptionPane.showMessageDialog(null, "Your name is " + firstName + " " + middleName + " " + lastName + ".");
+	String payRoll1 = 
+			JOptionPane.showInputDialog("How much money do you make per hour in a week?");
+	int payRoll = Integer.parseInt(payRoll1);
+	String payRoll2 = 
+			JOptionPane.showInputDialog("How many hours do you work in a week?");
+	int payRollHours = Integer.parseInt(payRoll2);
+	int totalSalary = payRoll * payRollHours;
+	JOptionPane.showMessageDialog(null, "You make $" + totalSalary + " in a week!");
+	String investment = 
+			JOptionPane.showInputDialog("How much money did you invest?");
+	int initInvest = Integer.parseInt(investment);
+	String percent = 
+			JOptionPane.showInputDialog("What is the percent growth?");
+	double percentGrowth = Double.parseDouble(percent);
+	double percentG1 = percentGrowth * 0.01;
+	double growth = initInvest * percentG1;
+	double total = growth + initInvest;
+	JOptionPane.showMessageDialog(null, "You made $" + growth + " this week!");
+	JOptionPane.showMessageDialog(null, "You now have $" + total + "!");
+	
+	System.exit(0);
+}
+}
